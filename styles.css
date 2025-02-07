@@ -1,58 +1,30 @@
-/* Styles for the body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 0;
+    background-color: #f5f2e9;
+    color: #4a4a4a;
 }
 
-/* Heading styles */
-h1 {
-    color: #333;
+.container {
+    width: 80%;
+    margin: auto;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 50px 0;
 }
 
-h2 {
-    color: #555;
+.hero img {
+    width: 14%;
+    height: 20%;
+    border: 3px solid #4a4a4a;
 }
 
-/* Image styles */
-img {
-    display: block;
-    margin: 20px auto;
+.contact {
+    text-align: center;
 }
 
-/* Unordered list styles */
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-/* Table styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-    color: #333;
-}
-
-/* Link styles */
-a {
-    color: #007bff;
+.contact a {
+    color: #5c7a52;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    font-weight: bold;
 }

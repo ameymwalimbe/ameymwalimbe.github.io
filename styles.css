@@ -1,30 +1,141 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f2e9;
-    color: #4a4a4a;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f2e9;
+  color: #4a4a4a;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding: 50px 0;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 50px 0;
 }
 
 .hero img {
-    width: 160px;
-    height: 250px;
-    border: 3px solid #4a4a4a;
+  width: 160px;
+  height: 250px;
+  border: 3px solid #4a4a4a;
 }
 
 .contact {
-    text-align: center;
+  text-align: center;
 }
 
 .contact a {
-    color: #5c7a52;
-    text-decoration: none;
-    font-weight: bold;
+  color: #5c7a52;
+  text-decoration: none;
+  font-weight: bold;
+}
+.projects {
+  margin-top: 50px;
+  position: relative;
+}
+
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  justify-content: center;
+  padding: 20px 40px;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 25%;
+  height: 350px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: auto;
+  scroll-snap-align: center; /* ✅ center snap */
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  /* transform: translateY(-10px); */
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 60%;
+  object-fit: scale-down;
+}
+
+.card h3,
+.card p {
+  margin: 10px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+/* .spacer {
+  flex: 0 0 calc((100%) / 2); Centers the first and last cards
+} */
+
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* make sure it's on top */
+  opacity: 0;
+  pointer-events: none; /* initially unclickable */
+  transition: opacity 0.3s ease;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #000;
 }

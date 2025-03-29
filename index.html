@@ -1,30 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="hero container">
-        <img src="assets/ameyGrad.jpg" alt="Profile Picture">
-        <h1>Amey Walimbe</h1>
-        <p>Hi, I'm Amey [uh-may-uh]. I am currently pursuing a Masters in CS at UC Santa Barbara. Before this, I earned my Bachelor's degree in CS at UCSB as well.</p>
-        <p>My main research interests include Computer Vision, HCI, and AR/VR. As such, I've joined the 4EyesLab led by Tobias Hollerer.</p>
+      <img src="assets/ameyGrad.jpg" alt="Profile Picture" />
+      <h1>Amey Walimbe</h1>
+      <p>
+        Hi, I'm Amey [uh-may-uh]. I am currently pursuing a Masters in CS at UC
+        Santa Barbara. Before this, I earned my Bachelor's degree in CS at UCSB
+        as well.
+      </p>
+      <p>
+        My main research interests include Computer Vision, HCI, and AR/VR. As
+        such, I've joined the 4EyesLab led by Tobias Hollerer.
+      </p>
+      <p>
+        Check out my
+        <a href="assets/Amey_Walimbe_Resume.pdf" target="_blank">resume</a> to
+        learn more about my work experience and projects.
+      </p>
     </div>
-    <div class="resume container">
-        <h2>Resume</h2>
-        <p>Check out my <a href="assets/Amey_Walimbe_Resume.pdf">resume</a> to learn more about my work experience and projects.</p>
+    <div class="projects container">
+      <h2>Projects</h2>
+      <div class="slider-wrapper">
+        <div class="slider">
+          <div class="spacer"></div>
+
+          <div class="card" data-modal="modal1">
+            <img src="assets/projects/robot.png" alt="Project 1" />
+            <h3>Towards Efficient and Robust Vision-Language-Action Models</h3>
+          </div>
+          <div class="card" data-modal="modal2">
+            <img src="assets/projects/bionic_eye.png" alt="Project 2" />
+            <h3>Context-Aware Saliency for Retinal Implant Users</h3>
+          </div>
+          <div class="card" data-modal="modal3">
+            <img
+              src="assets/projects/indoor_outdoor_depth.png"
+              alt="Project 3"
+            />
+            <h3>
+              Exploring Synthetically Pre-Trained Depth Estimation Networks
+            </h3>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Towards Efficient and Robust Vision-Language-Action Models</h2>
+        <p>
+          I built this project along with my groupmates for a Robot Learning
+          course at UCSB. Below are the main features and contributions.
+        </p>
+        <p>
+          Replaced the LLaMA2-7B architecture in OpenVLA with TinyLlama-1B, then
+          trained and finetuned on Llava-1.5 instruct, OpenX Embodiment, and
+          LIBERO datasets
+        </p>
+        <p>
+          Conducted systematic adversarial noise evaluations on OpenVLA,
+          identifying failure points and proposing improvements to increase
+          resilience against real-world perturbations
+        </p>
+        <p>Built with OpenVLA, PrismaticVLM, PyTorch, LoRA, and Python</p>
+        <a
+          href="https://drive.google.com/file/d/1zmWslvDqYJOA5DeivkXLSsXKpzXu55KF/view"
+          target="_blank"
+          >Check out the project report here!</a
+        >
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Context-Aware Saliency for Rential Implant Users</h2>
+        <p>
+          I built this project along with my groupmates for a Bionic Vision
+          course at UCSB. Below are the main features and contributions.
+        </p>
+        <p>
+          Developed a context-aware salient object detection pipeline that
+          integrates YOLOv8 for segmentation and GPT-4o for object saliency
+          ranking and classification, enhancing bionic vision for retinal
+          implant users
+        </p>
+        <p>Built with YOLOv8, OpenCV, GPT-4o and Python</p>
+        <a
+          href="https://drive.google.com/file/d/14Z18_DlBO6M-VxL7fec0hICZBg6DxZ-G/view"
+          target="_blank"
+          >Check out the project report here!</a
+        >
+      </div>
+    </div>
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Exploring Synthetically Pre-Trained Depth Estimation Networks</h2>
+        <p>
+          Improved indoor/outdoor image classification accuracy by 4.4%,
+          leveraging synthetically pre-trained depth-prediction networks to
+          enhance generalization across diverse datasets.
+        </p>
+        <p>Built with ResNet50 CNN, Omnidata, and Python</p>
+        <a href="https://ieeexplore.ieee.org/document/10031146" target="_blank"
+          >Check out the published paper!</a
+        >
+      </div>
+    </div>
+
     <div class="contact container">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out via <a href="mailto:ameymwalimbe@gmail.com">email</a> or connect with me on <a href="https://www.linkedin.com/in/ameywalimbe/">LinkedIn</a>.</p>
+      <h2>Contact Me</h2>
+      <p>
+        Feel free to reach out via
+        <a href="mailto:ameymwalimbe@gmail.com">email</a> or connect with me on
+        <a href="https://www.linkedin.com/in/ameywalimbe/">LinkedIn</a>.
+      </p>
     </div>
 
     <!-- Hyperlink to GitHub repository -->
     <p>
-        Check out the source code on my <a href="https://github.com/ameymwalimbe/ameymwalimbe.github.io">GitHub repository</a>.
+      Check out the source code on my
+      <a href="https://github.com/ameymwalimbe/ameymwalimbe.github.io"
+        >GitHub repository</a
+      >.
     </p>
-</body>
+
+    <script>
+      // Open Modal
+      document.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const modalId = card.getAttribute("data-modal");
+          const modal = document.getElementById(modalId);
+          if (modal) {
+            modal.style.display = "flex";
+            modal.style.opacity = "1";
+            modal.style.pointerEvents = "auto";
+          }
+        });
+      });
+
+      // Close Modal
+      document.querySelectorAll(".close-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const modal = btn.closest(".modal");
+          modal.style.opacity = "0";
+          modal.style.pointerEvents = "none";
+          setTimeout(() => (modal.style.display = "none"), 300); // matches transition
+        });
+      });
+
+      // Optional: clicking outside closes it too
+      window.addEventListener("click", (e) => {
+        if (e.target.classList.contains("modal")) {
+          e.target.style.opacity = "0";
+          e.target.style.pointerEvents = "none";
+          setTimeout(() => (e.target.style.display = "none"), 300);
+        }
+      });
+    </script>
+  </body>
 </html>

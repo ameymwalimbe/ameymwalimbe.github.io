@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Amey Walimbe's Website</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="hero container">
       <img src="assets/ameyGrad.jpg" alt="Profile Picture" />
-      <h1>Amey Walimbe</h1>
+      <br />
+      <h1 class="name">Amey Walimbe</h1>
       <p>
-        Hi, I'm Amey [uh-may-uh]. I am currently pursuing a Masters in CS at UC
-        Santa Barbara. Before this, I earned my Bachelor's degree in CS at UCSB
-        as well.
+        Hi, I'm Amey. I am currently pursuing a Masters in CS at UC Santa
+        Barbara. Before this, I earned my Bachelor's degree in CS at UCSB as
+        well.
       </p>
       <p>
-        My main research interests include Computer Vision, HCI, and AR/VR. As
-        such, I've joined the 4EyesLab led by Tobias Hollerer.
+        My main research interests include Computer Vision, AR/VR, and
+        applications of LLMs. Currently, I'm part of UCSB's 4EyesLab led by
+        Tobias Hollerer.
       </p>
       <p>
         Check out my
@@ -46,6 +48,21 @@
             />
             <h3>
               Exploring Synthetically Pre-Trained Depth Estimation Networks
+            </h3>
+          </div>
+          <div class="card" data-modal="modal4">
+            <img src="assets/projects/testagon.png" alt="Project 4" />
+            <h3>Testagon - LLM Powered Unit Test Generation</h3>
+          </div>
+          <div class="card" data-modal="modal5">
+            <img src="assets/projects/bug_fixer.png" alt="Project 5" />
+            <h3>ChatGPT as an Automatic Bug Fixer</h3>
+          </div>
+          <div class="card" data-modal="modal6">
+            <img src="assets/projects/spatially_aware.png" alt="Project 6" />
+            <h3>
+              Spatially AwARe - AR Based Navigation Assistance for Improved
+              Spatial Recognition and Understanding
             </h3>
           </div>
         </div>
@@ -115,20 +132,109 @@
         >
       </div>
     </div>
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Testagon - LLM Powered Unit Test Generation</h2>
+        <p>
+          Developed a tool that leverages LLMs to reason about logic invariants
+          in your python programs and uses them to generate a suite of
+          comprehensive unit tests. This was a group effort as part of the
+          graduate Computer Security course at UCSB.
+        </p>
+        <p>
+          Follows the Actor-Critic method, creating a feedback loop that finds
+          logic vulnerabilities in your source code. The “Actor” detects
+          invariants and writes them into the docstring of your program files.
+          It generates a test directory and writes unit tests for each one of
+          your program files, allowing the invariants to guide the process. The
+          “Critic" evaluates your program on the unit tests and records the
+          response. It Sends the response back to the “Actor” to restart the
+          process, aiming to refine the tests and invariants.
+        </p>
+
+        <p>
+          Built with Python and uses GPT-4o with structured JSON output support
+        </p>
+        <a href="https://github.com/Biggergig/Testagon" target="_blank"
+          >Check out the project github!</a
+        >
+      </div>
+    </div>
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>ChatGPT as an Automatic Bug Fixer</h2>
+        <p>
+          In this project, we benchmark ChatGPT's performance on our
+          self-curated, random dataset of “buggy” Leetcode problems to
+          investigate the impact of three varying levels of context in the
+          prompts we provide to ChatGPT.
+        </p>
+        <p>
+          Interestingly, we saw a marked decrease in GPT's program repair
+          performance when the function and variable names were obfuscated.
+        </p>
+        <p>
+          This project was done as part of CS272, UCSB's graduate Software
+          Engineering course.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1sZKMk7UBLLrpNPKH9FG49EPaQ2RgL-qd/view?usp=drive_link"
+          target="_blank"
+          >Check out the project report!</a
+        >
+      </div>
+    </div>
+    <div id="modal6" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>
+          Spatially AwARe - AR Based Navigation Assistance for Improved Spatial
+          Recognition and Understanding
+        </h2>
+        <p>
+          Developed a React Native mobile application integrating AR navigation
+          and spatial note-taking to enhance users' spatial awareness and memory
+          retention. This was a final project for the CS291I Mixed Reality grad
+          course at UCSB.
+        </p>
+        <p>
+          Implemented real-time landmark detection and annotation using Google
+          Places API, Firebase, and ViroReact to provide interactive AR-based
+          navigation assistance.
+        </p>
+        <p>
+          Designed a post-route quiz feature leveraging Google Geocoding API to
+          reinforce landmark recognition and improve users' long-term navigation
+          skills.
+        </p>
+        <p>Built with ARKit, Mapkit, Firebase</p>
+        <a
+          href="https://drive.google.com/file/d/1Ke4E6K_Lne-sd00k9YADoDoRaml6q6lF/view?usp=sharing"
+          target="_blank"
+          >Check out the project report!</a
+        >
+      </div>
+    </div>
 
     <div class="contact container">
       <h2>Contact Me</h2>
       <p>
         Feel free to reach out via
         <a href="mailto:ameymwalimbe@gmail.com">email</a> or connect with me on
-        <a href="https://www.linkedin.com/in/ameywalimbe/">LinkedIn</a>.
+        <a href="https://www.linkedin.com/in/ameywalimbe/" target="_blank"
+          >LinkedIn</a
+        >.
       </p>
     </div>
 
     <!-- Hyperlink to GitHub repository -->
     <p>
       Check out the source code on my
-      <a href="https://github.com/ameymwalimbe/ameymwalimbe.github.io"
+      <a
+        href="https://github.com/ameymwalimbe/ameymwalimbe.github.io"
+        target="_blank"
         >GitHub repository</a
       >.
     </p>
@@ -153,7 +259,7 @@
           const modal = btn.closest(".modal");
           modal.style.opacity = "0";
           modal.style.pointerEvents = "none";
-          setTimeout(() => (modal.style.display = "none"), 300); // matches transition
+          setTimeout(() => (modal.style.display = "none"), 300);
         });
       });
 
